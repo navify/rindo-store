@@ -1,0 +1,49 @@
+{
+  "name": "@rindo/store",
+  "version": "2.0.0",
+  "description": "Store is a lightweight shared state library by the RindoJS core team. Implements a simple key/value map that efficiently re-renders components when necessary.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rmdir /s dist && tsc -p . && npm run rollup",
+    "prettier": "prettier --write 'src/**/*.ts'",
+    "prettier.dry-run": "prettier --check 'src/**/*.ts'",
+    "release": "np",
+    "rollup": "rollup -c rollup.config.js",
+    "test": "echo \"Do nothing\"",
+    "version": "npm run build"
+  },
+  "keywords": [
+    "rindo",
+    "redux",
+    "global",
+    "state",
+    "tunnel",
+    "hooks"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "Navify Team",
+  "license": "MIT",
+  "homepage": "https://rindojs.com/rindo-store",
+  "peerDependencies": {
+    "@rindo/core": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@rindo/core": "^2.16.0",
+    "np": "^7.4.0",
+    "prettier": "^2.2.1",
+    "rollup": "^2.39.0",
+    "typescript": "^4.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/navify/rindo-store.git"
+  },
+  "volta": {
+    "node": "16.15.0",
+    "npm": "8.11.0"
+  }
+}
